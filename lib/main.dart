@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pressure_converter/bar.dart';
+import 'package:pressure_converter/bar1.dart';
+import 'package:pressure_converter/formula.dart';
+import 'package:pressure_converter/malumot.dart';
+import 'package:pressure_converter/paskal.dart';
+import 'package:pressure_converter/simob%20ustuni.dart';
 
-import 'Foiz konsentratsiya.dart';
+import 'Atmosfera bosimi.dart';
 
 void main(List<String> args) {
   runApp(MaterialApp(
@@ -39,7 +45,7 @@ class _eritmaState extends State<eritma> {
               child: ListView(
         children: [
           Container(
-            child: Image.asset("assets/images/drayverrasm.gif"),
+            child: Image.asset("assets/images/3.gif"),
           ),
 
           // ignore: unnecessary_new
@@ -48,7 +54,7 @@ class _eritmaState extends State<eritma> {
             title: new Text("Malumot"),
             onTap: () {
               Route route =
-                  MaterialPageRoute(builder: (context) => const foiz());
+                  MaterialPageRoute(builder: (context) => const malumot());
               Navigator.push(context, route);
             },
             trailing: new Icon(Icons.info),
@@ -57,7 +63,7 @@ class _eritmaState extends State<eritma> {
             title: new Text("Formula"),
             onTap: () {
               Route route =
-                  MaterialPageRoute(builder: (context) => const foiz());
+                  MaterialPageRoute(builder: (context) => const formula());
               Navigator.push(context, route);
             },
             trailing: new Icon(Icons.book),
@@ -79,10 +85,12 @@ class _eritmaState extends State<eritma> {
         child: ListView(children: [
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 70),
-            child: Container(
-              child: const Text(
-                'Eritma  konsentratsiyasini topish',
-                style: TextStyle(color: Colors.greenAccent, fontSize: 25),
+            child: Center(
+              child: Container(
+                child: const Text(
+                  'Bosim konvetri',
+                  style: TextStyle(color: Colors.greenAccent, fontSize: 25),
+                ),
               ),
             ),
           ),
@@ -92,6 +100,7 @@ class _eritmaState extends State<eritma> {
             child: TextButton(
               style: TextButton.styleFrom(
                 backgroundColor: Color.fromARGB(104, 37, 10, 190),
+                shadowColor: Color.fromARGB(1, 2, 3, 4),
                 padding: const EdgeInsets.all(30.0),
                 textStyle: const TextStyle(fontSize: 20),
               ),
@@ -100,7 +109,7 @@ class _eritmaState extends State<eritma> {
                 Navigator.push(context, route);
               },
               child: const Text(
-                'Foiz konsentartsiyasini topish',
+                'Atmosfera bosimini kilopaskalga aylantirish',
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -119,13 +128,16 @@ class _eritmaState extends State<eritma> {
                 Navigator.push(context, route);
               },
               child: const Text(
-                'Normal konsentartsiyasini topish',
+                'paskalni simob ustuniga aylantirish',
                 style: TextStyle(color: Colors.white),
               ),
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 60, vertical: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 60, vertical: 0),
             width: double.infinity,
             child: TextButton(
               style: TextButton.styleFrom(
@@ -134,11 +146,56 @@ class _eritmaState extends State<eritma> {
                 textStyle: const TextStyle(fontSize: 20),
               ),
               onPressed: () {
-                Route route = MaterialPageRoute(builder: (context) => foiz());
+                Route route = MaterialPageRoute(builder: (context) => paskal());
                 Navigator.push(context, route);
               },
               child: const Text(
-                'Molyar konsentartsiyasini topish',
+                'simob ustunini paskalga aylantirish',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 60, vertical: 0),
+            width: double.infinity,
+            child: TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: Color.fromARGB(104, 37, 10, 190),
+                padding: const EdgeInsets.all(30.0),
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              onPressed: () {
+                Route route = MaterialPageRoute(builder: (context) => bar());
+                Navigator.push(context, route);
+              },
+              child: const Text(
+                'atmosfera bosimini barga aylantirish',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 60, vertical: 0),
+            width: double.infinity,
+            child: TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: Color.fromARGB(104, 37, 10, 190),
+                shadowColor: Colors.blue,
+                padding: const EdgeInsets.all(30.0),
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              onPressed: () {
+                Route route = MaterialPageRoute(builder: (context) => bar1());
+                Navigator.push(context, route);
+              },
+              child: const Text(
+                'bar ni simob ustuniga aylantirish',
                 style: TextStyle(color: Colors.white),
               ),
             ),
