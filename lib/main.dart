@@ -45,7 +45,7 @@ class _eritmaState extends State<eritma> {
               child: ListView(
         children: [
           Container(
-            child: Image.asset("assets/images/3.gif"),
+            child: Image.asset("assets/images/2.gif"),
           ),
 
           // ignore: unnecessary_new
@@ -80,8 +80,7 @@ class _eritmaState extends State<eritma> {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/mainrasm.gif"),
-                fit: BoxFit.cover)),
+                image: AssetImage("assets/images/4.gif"), fit: BoxFit.cover)),
         child: ListView(children: [
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 70),

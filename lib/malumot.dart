@@ -17,7 +17,7 @@ class _malumotState extends State<malumot> {
         children: [
           Container(
             child: Image(
-              image: AssetImage('assets/images/2.gif'),
+              image: AssetImage('assets/images/3.gif'),
             ),
           ),
           Padding(
