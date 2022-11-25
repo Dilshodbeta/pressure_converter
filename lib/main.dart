@@ -28,7 +28,7 @@ class _eritmaState extends State<eritma> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text("pressure converter")),
+        title: const Center(child: Text("Pressure converter")),
         actions: [
           IconButton(
             onPressed: () {},
@@ -51,7 +51,7 @@ class _eritmaState extends State<eritma> {
           // ignore: unnecessary_new
 
           new ListTile(
-            title: new Text("Malumot"),
+            title: new Text("information"),
             onTap: () {
               Route route =
                   MaterialPageRoute(builder: (context) => const malumot());
@@ -69,7 +69,7 @@ class _eritmaState extends State<eritma> {
             trailing: new Icon(Icons.book),
           ),
           new ListTile(
-            title: new Text("Dasturdan Chiqish"),
+            title: new Text("Exit Program"),
             onTap: () {
               SystemNavigator.pop();
             },
@@ -87,7 +87,7 @@ class _eritmaState extends State<eritma> {
             child: Center(
               child: Container(
                 child: const Text(
-                  'Bosim konvetri',
+                  '',
                   style: TextStyle(color: Colors.greenAccent, fontSize: 25),
                 ),
               ),
@@ -108,7 +108,7 @@ class _eritmaState extends State<eritma> {
                 Navigator.push(context, route);
               },
               child: const Text(
-                'Atmosfera bosimini kilopaskalga aylantirish',
+                'Conversion of atmospheric pressure to Pascal',
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -127,7 +127,7 @@ class _eritmaState extends State<eritma> {
                 Navigator.push(context, route);
               },
               child: const Text(
-                'paskalni simob ustuniga aylantirish',
+                'Conversion of Pascal to atmospheric pressure',
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -149,7 +149,7 @@ class _eritmaState extends State<eritma> {
                 Navigator.push(context, route);
               },
               child: const Text(
-                'simob ustunini paskalga aylantirish',
+                'Convert mercury column to Pascal',
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -171,7 +171,7 @@ class _eritmaState extends State<eritma> {
                 Navigator.push(context, route);
               },
               child: const Text(
-                'atmosfera bosimini barga aylantirish',
+                'Conversion of atmospheric pressure to a bar',
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -194,7 +194,7 @@ class _eritmaState extends State<eritma> {
                 Navigator.push(context, route);
               },
               child: const Text(
-                'bar ni simob ustuniga aylantirish',
+                'Convert bar to Mercury column',
                 style: TextStyle(color: Colors.white),
               ),
             ),

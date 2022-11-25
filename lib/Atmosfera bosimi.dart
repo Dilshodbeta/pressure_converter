@@ -23,7 +23,7 @@ class _foizState extends State<foiz> {
             padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 70),
             child: Container(
               child: const Text(
-                'Atmosfera bosimini paskalga aylantirish',
+                'Conversion of Pascal to atmospheric pressure',
                 style: TextStyle(color: Colors.greenAccent, fontSize: 20),
               ),
             ),
@@ -38,16 +38,16 @@ class _foizState extends State<foiz> {
                   borderRadius: BorderRadius.circular(6),
                   color: const Color.fromARGB(255, 238, 235, 235)),
               child: TextField(
-                controller: mController,
-                decoration: InputDecoration(
-                    hintText: "atmosfera bosimi =  Pa  ",
-                    hintStyle:
-                        const TextStyle(color: Color.fromARGB(157, 5, 182, 85)),
-                    contentPadding: const EdgeInsets.all(10),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(6),
-                        borderSide: const BorderSide(color: Colors.teal))),
-              ),
+                  controller: mController,
+                  decoration: InputDecoration(
+                      hintText: " Pa = Atmospheric pressure   ",
+                      hintStyle: const TextStyle(
+                          color: Color.fromARGB(157, 5, 182, 85)),
+                      contentPadding: const EdgeInsets.all(10),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(6),
+                          borderSide: const BorderSide(color: Colors.teal))),
+                  keyboardType: TextInputType.number),
             ),
           ),
           Container(
@@ -60,10 +60,10 @@ class _foizState extends State<foiz> {
                 onPressed: () {
                   setState(() {
                     m = double.parse(mController!.text);
-                    javob = m! * 101325;
+                    javob = m! / 101325;
                   });
                 },
-                child: const Text("Hisoblash")),
+                child: const Text("Calculation")),
           ),
           const SizedBox(
             height: 20,
@@ -72,7 +72,7 @@ class _foizState extends State<foiz> {
               child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              "Javob :$javob Pa",
+              "Answer :$javob Pa",
               style: TextStyle(fontSize: 30, color: Colors.green),
             ),
           ))

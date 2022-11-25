@@ -22,7 +22,7 @@ class _formulaState extends State<formula> {
           ),
           Center(
             child: Container(
-              child: Text(style: TextStyle(fontSize: 25), "Umumiy formulasi"),
+              child: Text(style: TextStyle(fontSize: 25), "General formula"),
             ),
           ),
           SizedBox(

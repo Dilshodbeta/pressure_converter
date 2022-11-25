@@ -23,7 +23,7 @@ class _bar1State extends State<bar1> {
             padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 70),
             child: Container(
               child: const Text(
-                ' barni simob ustuniga aylantirish',
+                'Convert bar to Mercury column',
                 style: TextStyle(color: Colors.greenAccent, fontSize: 20),
               ),
             ),
@@ -38,16 +38,16 @@ class _bar1State extends State<bar1> {
                   borderRadius: BorderRadius.circular(6),
                   color: const Color.fromARGB(255, 238, 235, 235)),
               child: TextField(
-                controller: mController,
-                decoration: InputDecoration(
-                    hintText: "  simob ustunini barga aylantirish  ",
-                    hintStyle:
-                        const TextStyle(color: Color.fromARGB(157, 5, 182, 85)),
-                    contentPadding: const EdgeInsets.all(10),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(6),
-                        borderSide: const BorderSide(color: Colors.teal))),
-              ),
+                  controller: mController,
+                  decoration: InputDecoration(
+                      hintText: "   Turning a Mercury column into a bar ",
+                      hintStyle: const TextStyle(
+                          color: Color.fromARGB(157, 5, 182, 85)),
+                      contentPadding: const EdgeInsets.all(10),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(6),
+                          borderSide: const BorderSide(color: Colors.teal))),
+                  keyboardType: TextInputType.number),
             ),
           ),
           Container(
@@ -63,7 +63,7 @@ class _bar1State extends State<bar1> {
                     javob = m! * 29.52;
                   });
                 },
-                child: const Text("Hisoblash")),
+                child: const Text("Calculation")),
           ),
           const SizedBox(
             height: 20,
@@ -72,7 +72,7 @@ class _bar1State extends State<bar1> {
               child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              "Javob :$javob simob ustuni",
+              "Answer :$javob Mercury column ",
               style: TextStyle(fontSize: 30, color: Colors.green),
             ),
           ))

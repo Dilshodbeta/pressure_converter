@@ -23,7 +23,7 @@ class _paskalState extends State<paskal> {
             padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 70),
             child: Container(
               child: const Text(
-                'kilopaskalni simob ustuniga aylantirish',
+                'Convert Pascal to Mercury column',
                 style: TextStyle(color: Colors.greenAccent, fontSize: 20),
               ),
             ),
@@ -38,16 +38,16 @@ class _paskalState extends State<paskal> {
                   borderRadius: BorderRadius.circular(6),
                   color: const Color.fromARGB(255, 238, 235, 235)),
               child: TextField(
-                controller: mController,
-                decoration: InputDecoration(
-                    hintText: "  simob ustuni paskalga  aylantirish  ",
-                    hintStyle:
-                        const TextStyle(color: Color.fromARGB(157, 5, 182, 85)),
-                    contentPadding: const EdgeInsets.all(10),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(6),
-                        borderSide: const BorderSide(color: Colors.teal))),
-              ),
+                  controller: mController,
+                  decoration: InputDecoration(
+                      hintText: "  Convert mercury column to Pascal  ",
+                      hintStyle: const TextStyle(
+                          color: Color.fromARGB(157, 5, 182, 85)),
+                      contentPadding: const EdgeInsets.all(10),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(6),
+                          borderSide: const BorderSide(color: Colors.teal))),
+                  keyboardType: TextInputType.number),
             ),
           ),
           Container(
@@ -63,7 +63,7 @@ class _paskalState extends State<paskal> {
                     javob = m! * 133.3;
                   });
                 },
-                child: const Text("Hisoblash")),
+                child: const Text("Calculation")),
           ),
           const SizedBox(
             height: 20,
@@ -72,7 +72,7 @@ class _paskalState extends State<paskal> {
               child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              "Javob :$javob Pa",
+              "Answer :$javob Pa",
               style: TextStyle(fontSize: 30, color: Colors.green),
             ),
           ))
